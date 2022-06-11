@@ -3,7 +3,66 @@
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
-
+.image__container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+.image__track {
+  list-style: none;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.image__slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+.img {
+  width: 80%;
+  height: 100%;
+  object-fit: cover;
+  /* border: 8px solid white;
+  height: 350px;
+  width: auto; */
+}
+.carousel__indicator.current-slide {
+  background: rgba(0, 0, 0, 0.75);
+}
+.carousel__button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 30px;
+  background: transparent;
+  border: 0;
+  font-weight: bold;
+}
+.carousel__button--left {
+  left: -5px;
+}
+.carousel__button--right {
+  right: -5px;
+}
+.carousel__nav {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  margin: 0 auto;
+}
+.carousel__indicator {
+  border: none;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  background: rgba(0, 0, 0, 0.3);
+  margin: 0 5px;
+  cursor: pointer;
+}
 h2 {
   font-size: 25px;
 }
@@ -128,11 +187,7 @@ form {
   color: white;
   font-size: 20px;
 }
-.img {
-  border: 8px solid white;
-  height: 350px;
-  width: auto;
-}
+
 .me {
   padding-top: 60px;
   color: white;
