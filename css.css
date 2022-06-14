@@ -3,7 +3,11 @@
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
-.image__container {
+/* .sidespace {
+  padding: 0 30px;
+  margin: 0 auto;
+} */
+/* .image__container {
   position: relative;
   width: 100%;
   height: 400px;
@@ -13,21 +17,22 @@
   position: relative;
   height: 100%;
   width: 100%;
-  overflow: hidden;
+  overflow: hidden; 
 }
 .image__slide {
   position: absolute;
   top: 0;
   bottom: 0;
   width: 100%;
-}
+} */
 .img {
-  width: 80%;
+  /* width: 80%;
   height: 100%;
-  object-fit: cover;
-  /* border: 8px solid white;
+  object-fit: cover; */
+  border: 8px solid white;
   height: 350px;
-  width: auto; */
+  width: 100%;
+  object-fit: cover;
 }
 .carousel__indicator.current-slide {
   background: rgba(0, 0, 0, 0.75);
@@ -43,7 +48,8 @@
   font-weight: bold;
 }
 .carousel__button--left {
-  left: -5px;
+  left: 85px;
+  z-index: 100;
 }
 .carousel__button--right {
   right: -5px;
@@ -98,24 +104,21 @@ h6 {
   padding: 10px;
   margin: 0 10px;
 }
-.portfolio a:link {
+.buton,
+.buton:link,
+.buton:visited {
   color: white;
   background-color: blue;
   text-decoration: none;
   padding: 10px 30px;
   border-radius: 10px;
 }
-.portfolio a:visited {
-  color: red;
-  background-color: transparent;
-  text-decoration: none;
-}
-.portfolio a:hover {
+.buton:hover {
   color: whitesmoke;
   background-color: rgb(123, 100, 223);
   text-decoration: none;
 }
-.portfolio a:active {
+.buton:active {
   color: rgb(33, 33, 78);
   background-color: transparent;
   text-decoration: none;
@@ -127,6 +130,7 @@ h6 {
   border-radius: 40px;
   padding: 15px;
   margin: 0 50px;
+  box-shadow: 2px 5px 5px 2px rgba(0, 0, 0, 0.3);
 }
 .list {
   justify-content: flex-end;
@@ -253,6 +257,17 @@ footer p {
   color: white;
   font-weight: bold;
 }
+@media screen and (max-width: 1000px) {
+  .me {
+    padding-top: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .me {
+    padding-top: 60px;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .linear h1 {
     font-size: 20px;
@@ -274,5 +289,9 @@ footer p {
   }
   .photo {
     margin: 30px auto 0 !important;
+  }
+  .buton:not(last-child) {
+    display: block;
+    margin: 20px 0;
   }
 }
