@@ -293,7 +293,7 @@ footer p {
   .photo {
     margin: 30px auto 0 !important;
   }
-  .buton:not(:last-child) {
+  .buton {
     display: block;
     margin: 20px 0;
   }
