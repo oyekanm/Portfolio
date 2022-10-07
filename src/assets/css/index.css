@@ -5,6 +5,7 @@
 }
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 body {
   font-family: "Source Sans Pro", sans-serif;
@@ -18,6 +19,102 @@ a {
 .container {
   width: 90%;
   margin: 0 auto;
+}
+.Nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15rem;
+  transition: all 1s;
+}
+
+.Nav__name,
+.Nav__name:active,
+.Nav__name:link,
+.Nav__name:visited,
+.Nav__name:hover {
+  font-size: 3rem;
+  font-weight: 600;
+  position: fixed;
+  color: rgba(255, 255, 255, 0.8);
+  top: 3rem;
+  z-index: 100;
+}
+.Navigation {
+  cursor: pointer;
+  position: fixed;
+  top: 3rem;
+  right: 5rem;
+  z-index: 5000;
+  transition: all 0.2s;
+}
+.show {
+  transform: rotate(90deg);
+}
+.Nav__button {
+  /* position: relative; */
+  width: 3rem;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: 0.5rem auto;
+  transition: all 0.3s ease-in-out;
+
+  background-color: #000;
+}
+.Nav__button:nth-child(2) {
+  width: 2rem;
+  margin: 0.5rem 0;
+  text-align: right;
+}
+
+.Navigation.show .Nav__button:nth-child(1) {
+  transform: rotate(45deg);
+  width: 2.5rem;
+}
+.Navigation.show .Nav__button:nth-child(2) {
+  transform: translate(-8px);
+}
+.Navigation.show .Nav__button:nth-child(3) {
+  transform: rotate(-45deg);
+  width: 2.5rem;
+}
+.Nav__link,
+.Nav__link:active,
+.Nav__link:link,
+.Nav__link:visited,
+.Nav__link:hover {
+  font-size: 4rem;
+  font-weight: 600;
+  color: #000;
+  letter-spacing: 3px;
+}
+.navbar-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10%;
+}
+.navbar {
+  display: none;
+  z-index: 1000;
+  width: 100%;
+  height: 50vh;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  top: -100%;
+  transition: all 1s;
+}
+.active {
+  display: block;
+  top: 0;
+  background-color: rgba(255, 255, 255, 1);
+  /* bottom: -100px; */
+}
+.Nav__item {
+  list-style: none;
+  margin: 2rem auto;
+  padding: 1rem;
 }
 .Header {
   margin-block: 5rem;
@@ -193,4 +290,53 @@ a {
   font-weight: 600;
   box-shadow: 0 0 10px rgba(225, 225, 225, 0.3);
   border-radius: 8px;
+  text-transform: uppercase;
+}
+.Scroll {
+  background-color: rgba(255, 255, 255, 0.9);
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
+  padding: 0.5rem;
+  border-radius: 50px;
+  border: none;
+}
+.footer {
+  padding: 2rem 0;
+  margin-top: 5rem;
+}
+.footer__socials {
+  display: flex;
+  gap: 2rem;
+}
+.footer__link,
+.footer__link:link,
+.footer__link:hover,
+.footer__link:active,
+.footer__link:visited {
+  border-left: 3px solid rgb(67, 129, 126);
+  font-weight: 600;
+  text-transform: capitalize;
+  font-size: 2rem;
+  transition: all 0.3s;
+  padding: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  outline: none;
+}
+.footer__link:hover {
+  border-right: 3px solid rgb(67, 129, 126);
+  background: rgba(162, 165, 214, 0.082);
+  box-shadow: 0 0 7px rgba(225, 225, 225, 0.3);
+  border-radius: 8px;
+}
+.footer__flex {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0;
+}
+.footer__name {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
 }
