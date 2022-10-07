@@ -203,7 +203,7 @@ export default [
   {
     id: 21,
     author: "Oyekanmi",
-    image: "https://i.ibb.co/VL0tF9H/Screenshot-3.png",
+    image: "https://i.ibb.co/CVKRSzj/Screenshot-39.png",
     name: "crappo landing page",
     language: ["html", "sass", "aos", "gsap"],
     category: "sass",
@@ -213,7 +213,7 @@ export default [
   {
     id: 22,
     author: "Oyekanmi",
-    image: "https://i.ibb.co/VL0tF9H/Screenshot-3.png",
+    image: "https://i.ibb.co/3dJ90f7/Screenshot-38.png",
     name: "portfolio",
     language: ["react", "css", "aos", "framer-motion"],
     category: "react",

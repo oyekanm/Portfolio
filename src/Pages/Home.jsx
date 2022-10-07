@@ -8,9 +8,9 @@ import Typewriter from "typewriter-effect";
 const languages = Data.map((item) => item.language);
 
 function Home() {
-  const [project, setProject] = useState(Data.slice(5, 10));
+  const [project, setProject] = useState(Data.slice(17, 22));
   const [language] = useState(languages);
-  const [newSet, setNewSet] = useState();
+  const [newSet, setNewSet] = useState([]);
 
   useEffect(() => {
     const spreadlang = [];
