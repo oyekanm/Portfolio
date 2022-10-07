@@ -17,7 +17,7 @@ function Home() {
     for (let i = 0; i < language.length; i++) {
       spreadlang.push(...language[i]);
     }
-    const spread = [...new Set(spreadlang)];
+    const spread = [...new Set(spreadlang), "github", "git"];
     setNewSet(spread);
   }, [language]);
 
