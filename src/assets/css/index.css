@@ -342,3 +342,11 @@ a {
   letter-spacing: 3px;
   text-transform: uppercase;
 }
+.whatsapp__link {
+  background-color: #fff;
+  position: fixed;
+  right: 0;
+  top: 20%;
+  padding: 1rem;
+  border-radius: 50%;
+}
