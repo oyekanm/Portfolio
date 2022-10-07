@@ -18,15 +18,15 @@ function Navbar() {
         <div className="Nav__button"></div>
         <div className="Nav__button"></div>
       </div>
-      <div className={show ? "navbar active" : "navbar"}>
+      <div className={show ? "navbar activ" : "navbar"}>
         <ul className="navbar-nav">
-          <li className="Nav__item">
+          <li className="Nav__item" onClick={() => setShow(false)}>
             <NavLink to="/" className="Nav__link ">
               Oyekanmi
             </NavLink>
           </li>
-          <li className="Nav__item">
-            <NavLink to="/projects" className="Nav__link ">
+          <li className="Nav__item" onClick={() => setShow(false)}>
+            <NavLink to="/projects" className="Nav__link">
               Projects
             </NavLink>
           </li>
