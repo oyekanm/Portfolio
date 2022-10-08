@@ -2,16 +2,35 @@ import React, { useEffect, useState } from "react";
 import Data from "../Data";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Category from "../components/Category";
+
+const category = ["all", ...new Set(Data.map((category) => category.category))];
 
 function Projects() {
   const [project, setProject] = useState(Data);
+  const [categories, setCategories] = useState(category);
+  console.log(categories);
 
   useEffect(() => {
     AOS.init();
   }, []);
 
+  const filterBtn = (id) => {
+    if (id === "all") {
+      setProject(Data);
+    } else {
+      const filterCat = Data.filter((category) => category.category === id);
+      setProject(filterCat);
+    }
+  };
+
   return (
     <section className="container">
+      {categories.map((category, index) => {
+        return (
+          <Category key={index} category={category} filterBtn={filterBtn} />
+        );
+      })}
       <div className="Projects">
         {project.map((project) => {
           const { id, author, image, name, language, url, Github } = project;

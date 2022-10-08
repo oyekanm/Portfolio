@@ -4,6 +4,7 @@ import Data from "../Data";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Typewriter from "typewriter-effect";
+import motion from "framer-motion";
 
 const languages = Data.map((item) => item.language);
 
@@ -27,13 +28,14 @@ function Home() {
   return (
     <section className="container">
       <div className="Header">
-        <p className="Header__hello">hello,</p>
+        <motion.p animate={{ x: 0, duration: 2000 }} className="Header__hello">
+          hello,
+        </motion.p>
         <p className="Header__name">i am Boluwatife</p>
         <div className="Header__desc">
           <Typewriter
             options={{
               loop: true,
-              delay: 200,
             }}
             onInit={(typewriter) => {
               typewriter
